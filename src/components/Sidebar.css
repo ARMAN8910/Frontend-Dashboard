@@ -12,13 +12,14 @@
 
 .logo {
   display: flex;
-  height: 5rem;
+  height: 10rem;
   font-weight: bold;
   font-size: 22px;
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  height: 4%;
+  height: 5%;
+  
 }
 .logo > span > span {
   color: var(--pink);

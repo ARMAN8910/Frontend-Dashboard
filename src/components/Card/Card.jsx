@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Card.css";
-import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { UilTimes } from "@iconscout/react-unicons";
@@ -23,7 +22,6 @@ const Card = (props) => {
 
 // Compact Card
 function CompactCard({ param, setExpanded }) {
-  const Png = param.png;
   return (
     <motion.div
       className="CompactCard"
@@ -34,17 +32,19 @@ function CompactCard({ param, setExpanded }) {
       layoutId="expandableCard"
       onClick={setExpanded}
     >
-      <div className="radialBar">
-        <CircularProgressbar
-          value={param.barValue}
-          text={`${param.barValue}%`}
-        />
+      {/* Title at the top */}
+      <div className="title">
         <span>{param.title}</span>
       </div>
-      <div className="detail">
-        <Png />
-        <span>${param.value}</span>
-        <span>Last 24 hours</span>
+
+      {/* Value in the middle */}
+      <div className="content">
+        <span>{param.value}</span>
+      </div>
+
+      {/* Last 24 hours at the bottom */}
+      <div>
+        <span className="details">Get Stastics</span>
       </div>
     </motion.div>
   );
@@ -115,11 +115,15 @@ function ExpandedCard({ param, setExpanded }) {
       <div style={{ alignSelf: "flex-end", cursor: "pointer", color: "white" }}>
         <UilTimes onClick={setExpanded} />
       </div>
-        <span>{param.title}</span>
+      <span>{param.title}</span>
       <div className="chartContainer">
         <Chart options={data.options} series={param.series} type="area" />
       </div>
-      <span>Last 24 hours</span>
+      <div>
+        <span>Total Men: 120 </span>
+        <hr />
+        <span>Total Women: 111 </span>
+      </div>
     </motion.div>
   );
 }

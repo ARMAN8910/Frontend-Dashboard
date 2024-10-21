@@ -1,0 +1,83 @@
+.schedule-container {
+    border-radius: 0.7rem !important;
+  }
+  
+  .schedule-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .priority-section, .other-section {
+    margin-bottom: 15px;
+    
+  }
+  
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .task-title {
+    font-size: 14px;
+  }
+  
+  .task-time {
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .create-schedule-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .task-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border-radius: 0.7rem !important; /* Default background color */
+  }
+  
+  .task-box:hover {
+    background-color: #e0e0e0; /* Hover background color */
+  }
+  .schedule-container {
+    border: 1px solid #ccc;
+    padding: 0.5px;
+    overflow-y: scroll; /* Add vertical scrolling */
+  }
+
+  .schedule-container {
+    height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }

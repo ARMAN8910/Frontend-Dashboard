@@ -25,6 +25,7 @@
   align-items: center;
   justify-content: center;
   font-family: 'Inter', sans-serif;
+  overflow: hidden; 
 }
 
 .AppGlass {
@@ -48,5 +49,12 @@
 @media screen and (max-width: 768px) {
   .AppGlass{
     grid-template-columns: 1fr;
+   
   } 
+}
+
+
+.AppGlass {
+ 
+  overflow-y: auto; 
 }
